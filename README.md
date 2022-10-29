@@ -11,6 +11,10 @@
 
 <br>
 
+![Gambar Network](./images/network.png)
+
+<br>
+
 ![Gambar Ostania](./images/ostania.png)
 
 <br/>
@@ -56,6 +60,8 @@
 ### 5. DNS Slave di Berlint
 
 ![Gambar 5](./images/5.png)
+
+> Untuk membuat DNS slave, perlu konfigurasi tambahan pada named.conf.local dengan type master, notify ke IP Berlint, dan Allow-transfer ke IP Berlint. Selanjutnya Konfigurasi yang sama dilakukan di Berlint dengan type nya slave dan menuju ke IP Berlint (Gambar Konfigurasi Berlint lebih lengkap ada pada gambar di soal nomor 6).
 
 <br>
 <hr>
