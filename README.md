@@ -115,6 +115,8 @@
 
 ![Gambar 10](./images/10.png)
 
+> Pada soal ini, diperlukan konfigurasi VirtualHost seperti pada gambar, beberapa command seperti pada gambar, diperlukan membuat directory eden.wise.a05.com dan memindahkan aset di directory eden.wise ke var/www/eden.wise.a05.com
+
 <br>
 <hr>
 <br>
