@@ -71,6 +71,8 @@
 
 ![Gambar 6](./images/6.png)
 
+> Pada soal ini, perlu konfigurasi tambahan pada wise.ao5.com. A dengan ns1 ke IP Berlint dan NS dengan operation ke ns1. Lalu, pada file named.conf.options diperlukan konfigurasi options seperti pada gambar. Pada Berlint juga hampir sama konfigurasinya dengan WISE. Perlu ditambahkan options seperti pada gambar. Selanjutnya, pada file operation/operation.wise.a05.com juga diperlukan konfigurasi seperti gambar.
+
 <br>
 <hr>
 <br>
