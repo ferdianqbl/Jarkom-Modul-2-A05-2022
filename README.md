@@ -99,6 +99,8 @@
 
 ![Gambar 9](./images/9.png)
 
+> Pada soal ini, diperlukan apache 2 dan a2enmod rewrite. Pada .htaccess diperlukan konfigurasi seperti pada gambar. Selanjutnya, pada file wise.a05.com.conf diperlukan konfigurasi VirtualHost seperti pada gambar. Terdapat konfigurasi ServerAdmin, DocumentRoot, ServerName, ServerAlias.
+
 <br>
 <hr>
 <br>
