@@ -18,7 +18,9 @@ echo 'zone "wise.a05.com" {
         type master;
         file "/etc/bind/wise/wise.a05.com";
 };' > /etc/bind/named.conf.local
+
 mkdir /etc/bind/wise
+
 echo "
 \$TTL    604800
 @       IN      SOA     wise.a05.com. root.wise.a05.com. (
