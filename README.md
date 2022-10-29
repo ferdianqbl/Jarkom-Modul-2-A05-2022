@@ -7,7 +7,9 @@
 
 ### Initial Project
 
-![Gambar Ostania](./images/ostania.png)
+> wise.a05.com
+> <br>
+> ![Gambar Ostania](./images/ostania.png)
 
 <br/>
 
@@ -22,6 +24,8 @@
 ### 2. Akses wise.yyy.com dengan alias www.wise.yyy.com pada folder wise
 
 ![Gambar 2](./images/2.png)
+
+> Pada script tersebut, agar dapat mengakses alias www.wise.yyy.com maka diperlukan konfigurasi di file named.conf.local dan file di /etc/bind/wise/wise.a05.com. Dengan menambahkan konfigurasi CNAME maka www.wise.yyy.com akan bisa diakses
 
 <br>
 <hr>
@@ -86,3 +90,59 @@
 ### 10. Pada subdomain www.eden.wise.yyy.com, Loid membutuhkan penyimpanan aset yang memiliki DocumentRoot pada /var/www/eden.wise.yyy.com
 
 ![Gambar 10](./images/10.png)
+
+<br>
+<hr>
+<br>
+
+### 11. Pada folder /public, Loid ingin hanya dapat melakukan directory listing saja
+
+![Gambar 11](./images/11.png)
+
+<br>
+<hr>
+<br>
+
+### 12. Error file 404.html pada folder /error untuk mengganti error kode pada apache
+
+![Gambar 12](./images/12.png)
+
+<br>
+<hr>
+<br>
+
+### 13. Membuat konfigurasi virtual host. Virtual host ini bertujuan untuk dapat mengakses file asset www.eden.wise.yyy.com/public/js menjadi www.eden.wise.yyy.com/js
+
+![Gambar 13](./images/13.png)
+
+<br>
+<hr>
+<br>
+
+### 14. www.strix.operation.wise.yyy.com hanya bisa diakses dengan port 15000 dan port 15500
+
+![Gambar 14](./images/14.png)
+
+<br>
+<hr>
+<br>
+
+### 15. Autentikasi username Twilight dan password opStrix dan file di /var/www/strix.operation.wise.yyy
+
+![Gambar 15](./images/15.png)
+
+<br>
+<hr>
+<br>
+
+### 16. Mengakses IP Eden akan dialihkan secara otomatis ke www.wise.yyy.com
+
+![Gambar 16](./images/16.png)
+
+<br>
+<hr>
+<br>
+
+### 17. Mengubah request gambar yang memiliki substring “eden” akan diarahkan menuju eden.png.
+
+![Gambar 17](./images/17.png)
