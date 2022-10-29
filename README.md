@@ -8,8 +8,10 @@
 ### Initial Project
 
 > wise.a05.com
-> <br>
-> ![Gambar Ostania](./images/ostania.png)
+
+<br>
+
+![Gambar Ostania](./images/ostania.png)
 
 <br/>
 
