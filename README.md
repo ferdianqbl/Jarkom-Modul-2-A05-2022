@@ -23,6 +23,10 @@
 
 ### 1. Semua node terhubung ke router Ostania sehingga dapat mengakses internet
 
+![Gambar 1](./images/1.png)
+
+> Pada soal ini, agar terhubung ke router Ostania diperlukan konfigurasi pada resolv.conf seperti pada gambar.
+
 <br>
 <hr>
 <br>
@@ -91,6 +95,8 @@
 
 ![Gambar 8](./images/8.png)
 
+> Pada soal ini, diperlukan apache2, php, libapache2-mod-php7.0, openssl, unzip, dan git. Setelah itu, file - file yang dibutuhkan didownload atau diambil dari repository github yang sebelumnya, file - file sudah dimasukkan ke repo tersebut. Lalu, file - file di unzip. Setelah itu, pengaturan VirtualHost di wise.a05.com.conf.
+
 <br>
 <hr>
 <br>
@@ -116,6 +122,8 @@
 ### 11. Pada folder /public, Loid ingin hanya dapat melakukan directory listing saja
 
 ![Gambar 11](./images/11.png)
+
+>
 
 <br>
 <hr>

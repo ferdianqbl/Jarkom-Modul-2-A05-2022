@@ -256,7 +256,6 @@ apt-get install ca-certificates openssl -y
 apt-get install unzip -y
 apt-get install git -y
 git clone https://github.com/wahidabd/Jarkom-Modul-2.git
-# unzip -o /root/Jarkom-Modul-2/\*.zip -d /root/Jarkom-Modul-2
 unzip /root/Jarkom-Modul-2/eden.wise.zip -d /root/Jarkom-Modul-2/
 unzip /root/Jarkom-Modul-2/strix.operation.wise.zip -d /root/Jarkom-Modul-2/
 unzip /root/Jarkom-Modul-2/wise.zip -d /root/Jarkom-Modul-2/
@@ -274,7 +273,6 @@ echo "
 " > /etc/apache2/sites-available/wise.a05.com.conf
 a2ensite wise.a05.com
 mkdir /var/www/wise.a05.com
-# cp -r /root/Jarkom-Modul-2/wise/* /var/www/wise.a05.com
 mv /root/Jarkom-Modul-2/wise/* /var/www/wise.a05.com
 service apache2 restart
 
@@ -325,10 +323,8 @@ echo "
 " > /etc/apache2/sites-available/eden.wise.a05.com.conf
 a2ensite eden.wise.a05.com
 mkdir /var/www/eden.wise.a05.com
-# cp -r /root/Jarkom-Modul-2/eden.wise/ /var/www/eden.wise.a05.com
 mv /root/Jarkom-Modul-2/eden.wise/* /var/www/eden.wise.a05.com
 service apache2 restart
-# echo "<?php echo 'yes nomor 10' ?>" > /var/www/eden.wise.a05.com/index.php
 
 # nomor 11
 
@@ -463,15 +459,9 @@ echo "
 a2ensite strix.operation.wise.a05.com
 service apache2 restart
 mkdir /var/www/strix.operation.wise.a05.com
-# cp -r /root/Jarkom-Modul-2/strix.operation.wise/ /var/www/strix.operation.wise.a05.com/
 mv /root/Jarkom-Modul-2/strix.operation.wise/* /var/www/strix.operation.wise.a05.com/
 rm -rf Jarkom-Modul-2
 
-# echo "
-# <?php
-#         echo 'selamat 14';
-# ?>
-# " > /var/www/strix.operation.wise.a05.com/index.php
 echo "
 # If you just change the port or add more ports here, you will likely also
 # have to change the VirtualHost statement in
