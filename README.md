@@ -125,7 +125,7 @@
 
 ![Gambar 11](./images/11.png)
 
->
+> Pada soal ini, perlu konfigurasi VirtualHost seperti pada gambar.
 
 <br>
 <hr>
@@ -135,6 +135,8 @@
 
 ![Gambar 12](./images/12.png)
 
+> Pada soal ini, di dalam VirtualHost perlu konfigurasi ErrorDocument agar mengarah ke 404.html
+
 <br>
 <hr>
 <br>
@@ -142,6 +144,8 @@
 ### 13. Membuat konfigurasi virtual host. Virtual host ini bertujuan untuk dapat mengakses file asset www.eden.wise.yyy.com/public/js menjadi www.eden.wise.yyy.com/js
 
 ![Gambar 13](./images/13.png)
+
+> Pada soal ini, perlu konvigurasi <Directory> dan Aliasnya seperti pada gambar.
 
 <br>
 <hr>
@@ -151,6 +155,8 @@
 
 ![Gambar 14](./images/14.png)
 
+> Pada soal ini, diperlukan konfigurasi pada ports.conf dengan Listen ke 80, 15000, 15500
+
 <br>
 <hr>
 <br>
@@ -158,6 +164,8 @@
 ### 15. Autentikasi username Twilight dan password opStrix dan file di /var/www/strix.operation.wise.yyy
 
 ![Gambar 15](./images/15.png)
+
+> Pada soal ini, diperlukan htpasswd dengan username Twilight dan password opStrix. Lalu, konfigurasi VirtualHost seperti pada gambar
 
 <br>
 <hr>
@@ -167,6 +175,8 @@
 
 ![Gambar 16](./images/16.png)
 
+> Pada konfigurasi VirtualHost diperlukan RewriteEngine, RewriteCond, dan RewriteRule yang mengarahkan ke www.wise.yyy.com
+
 <br>
 <hr>
 <br>
@@ -174,3 +184,5 @@
 ### 17. Mengubah request gambar yang memiliki substring “eden” akan diarahkan menuju eden.png.
 
 ![Gambar 17](./images/17.png)
+
+> Diperlukan RewriteRule dengan aturan ketika terdapat substring eden akan diarahkan menuju eden.png
