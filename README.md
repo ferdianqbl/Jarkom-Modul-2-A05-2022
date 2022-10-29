@@ -37,6 +37,8 @@
 
 ![Gambar 3](./images/3.png)
 
+> Pada script tersebut, diperlukan konfigurasi tambahan pada file wise.a05.com. Konfigurasi tersebut berupa penambahan A dengan IP mengarah ke IP eden dan penambahan alias CNAME www.eden.
+
 <br>
 <hr>
 <br>
