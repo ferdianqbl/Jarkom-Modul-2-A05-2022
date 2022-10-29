@@ -47,6 +47,8 @@
 
 ![Gambar 4](./images/4.png)
 
+> Pada soal ini, perlu penambahan konfigurasi pada file named.conf.local, yaitu konfigurasi zone 3.171.192.in-addr.arpa. Selanjutnya, konfigurasi juga di file zone tadi dengan NS ke wise.a05.com dan PTR ke wise.a05.com
+
 <br>
 <hr>
 <br>

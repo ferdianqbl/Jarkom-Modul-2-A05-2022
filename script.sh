@@ -1,7 +1,7 @@
 #!/bin/bash
 Ostania(){
     apt-get update
-    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 10.12.0.0/16
+    iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.171.0.0/16
 
 }
 
@@ -18,9 +18,7 @@ echo 'zone "wise.a05.com" {
         type master;
         file "/etc/bind/wise/wise.a05.com";
 };' > /etc/bind/named.conf.local
-
 mkdir /etc/bind/wise
-
 echo "
 \$TTL    604800
 @       IN      SOA     wise.a05.com. root.wise.a05.com. (
@@ -31,7 +29,7 @@ echo "
                         604800 )        ; Negative Cache TTL
 ;
 @               IN      NS      wise.a05.com.
-@               IN      A       10.12.3.2 ; IP Wise
+@               IN      A       192.171.3.2 ; IP Wise
 www             IN      CNAME   wise.a05.com.
 " > /etc/bind/wise/wise.a05.com
 service bind9 restart
@@ -47,9 +45,9 @@ echo "
                         604800 )        ; Negative Cache TTL
 ;
 @               IN      NS      wise.a05.com.
-@               IN      A       10.12.3.2 ; IP Wise
+@               IN      A       192.171.3.2 ; IP Wise
 www             IN      CNAME   wise.a05.com.
-eden           IN      A       10.12.2.3 ; IP Eden
+eden           IN      A       192.171.2.3 ; IP Eden
 www.eden       IN      CNAME   eden.wise.a05.com.
 " > /etc/bind/wise/wise.a05.com
 service bind9 restart
@@ -62,9 +60,9 @@ zone "wise.a05.com" {
         file "/etc/bind/wise/wise.a05.com";
 };
 
-zone "3.12.10.in-addr.arpa" {
+zone "3.171.192.in-addr.arpa" {
         type master;
-        file "/etc/bind/wise/3.12.10.in-addr.arpa";
+        file "/etc/bind/wise/3.171.192.in-addr.arpa";
 };' > /etc/bind/named.conf.local
 
 echo "
@@ -76,9 +74,9 @@ echo "
                         2419200         ; Expire
                         604800 )        ; Negative Cache TTL
 ;
-3.12.10.in-addr.arpa.   IN      NS      wise.a05.com.
+3.171.192.in-addr.arpa.   IN      NS      wise.a05.com.
 2                       IN      PTR     wise.a05.com.
-"> /etc/bind/wise/3.12.10.in-addr.arpa
+"> /etc/bind/wise/3.171.192.in-addr.arpa
 service bind9 restart
 
 
@@ -88,14 +86,14 @@ echo '
 zone "wise.a05.com" {
         type master;
         notify yes;
-        also-notify {10.12.2.2;};  //Masukan IP Berlint tanpa tanda petik
-        allow-transfer {10.12.2.2;}; // Masukan IP Berlint tanpa tanda petik
+        also-notify {192.171.2.2;};  //Masukan IP Berlint tanpa tanda petik
+        allow-transfer {192.171.2.2;}; // Masukan IP Berlint tanpa tanda petik
         file "/etc/bind/wise/wise.a05.com";
 };
 
-zone "2.12.10.in-addr.arpa" {
+zone "2.171.192.in-addr.arpa" {
         type master;
-        file "/etc/bind/wise/2.12.10.in-addr.arpa";
+        file "/etc/bind/wise/2.171.192.in-addr.arpa";
 };' > /etc/bind/named.conf.local
 service bind9 restart
 
@@ -110,11 +108,11 @@ echo "
                         604800 )        ; Negative Cache TTL
 ;
 @               IN      NS      wise.a05.com.
-@               IN      A       10.12.2.3 ; IP Eden
+@               IN      A       192.171.2.3 ; IP Eden
 www             IN      CNAME   wise.a05.com.
-eden           IN      A       10.12.2.3 ; IP Eden
+eden           IN      A       192.171.2.3 ; IP Eden
 www.eden       IN      CNAME   eden.wise.a05.com.
-ns1             IN      A       10.12.2.2; IP Berlint
+ns1             IN      A       192.171.2.2; IP Berlint
 operation           IN      NS      ns1
 "> /etc/bind/wise/wise.a05.com
 
@@ -132,14 +130,14 @@ echo '
 zone "wise.a05.com" {
         type master;
         //notify yes;
-        //also-notify {10.12.2.2;};  Masukan IP Berlint tanpa tanda petik
+        //also-notify {192.171.2.2;};  Masukan IP Berlint tanpa tanda petik
         file "/etc/bind/wise/wise.a05.com";
-        allow-transfer {10.12.2.2;}; // Masukan IP Berlint tanpa tanda petik
+        allow-transfer {192.171.2.2;}; // Masukan IP Berlint tanpa tanda petik
 };
 
-zone "2.12.10.in-addr.arpa" {
+zone "2.171.192.in-addr.arpa" {
         type master;
-        file "/etc/bind/wise/2.12.10.in-addr.arpa";
+        file "/etc/bind/wise/2.171.192.in-addr.arpa";
 };
 ' >  /etc/bind/named.conf.local
 
@@ -155,7 +153,7 @@ apt-get install bind9 -y
 echo '
 zone "wise.a05.com" {
         type slave;
-        masters { 10.12.3.2; }; // Masukan IP Wise tanpa tanda petik
+        masters { 192.171.3.2; }; // Masukan IP Wise tanpa tanda petik
         file "/var/lib/bind/wise.a05.com";
 };
 ' > /etc/bind/named.conf.local
@@ -173,7 +171,7 @@ options {
 echo '
 zone "wise.a05.com" {
         type slave;
-        masters { 10.12.3.2; }; // Masukan IP Wise tanpa tanda petik
+        masters { 192.171.3.2; }; // Masukan IP Wise tanpa tanda petik
         file "/var/lib/bind/wise.a05.com";
 };
 
@@ -193,7 +191,7 @@ echo "
                         604800 )       ; Negative Cache TTL
 ;
 @               IN      NS      operation.wise.a05.com.
-@               IN      A       10.12.2.3       ;ip Eden
+@               IN      A       192.171.2.3       ;ip Eden
 www             IN      CNAME   operation.wise.a05.com.
 " > /etc/bind/operation/operation.wise.a05.com
 service bind9 restart
@@ -210,9 +208,9 @@ echo "
                         604800 )       ; Negative Cache TTL
 ;
 @               IN      NS      operation.wise.a05.com.
-@               IN      A       10.12.2.3       ;ip Eden
+@               IN      A       192.171.2.3       ;ip Eden
 www             IN      CNAME   operation.wise.a05.com.
-strix           IN      A       10.12.2.3       ;IP Eden
+strix           IN      A       192.171.2.3       ;IP Eden
 www.strix       IN      CNAME   strix.operation.wise.a05.com.
 " > /etc/bind/operation/operation.wise.a05.com
 service bind9 restart
@@ -225,9 +223,9 @@ apt-get update
 apt-get install dnsutils -y
 apt-get install lynx -y
 echo "
-nameserver 10.12.3.2
-nameserver 10.12.2.2
-nameserver 10.12.2.3
+nameserver 192.171.3.2
+nameserver 192.171.2.2
+nameserver 192.171.2.3
 
 " > /etc/resolv.conf
 }
@@ -238,9 +236,9 @@ apt-get update
 apt-get install dnsutils -y
 apt-get install lynx -y
 echo "
-nameserver 10.12.3.2
-nameserver 10.12.2.2
-nameserver 10.12.2.3
+nameserver 192.171.3.2
+nameserver 192.171.2.2
+nameserver 192.171.2.3
 
 " > /etc/resolv.conf
 }
