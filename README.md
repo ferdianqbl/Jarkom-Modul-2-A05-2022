@@ -77,9 +77,11 @@
 <hr>
 <br>
 
-### 7. Subdomainmelalui Berlint dengan akses strix.operation.wise.yyy.com dengan alias www.strix.operation.wise.yyy.com
+### 7. Subdomain melalui Berlint dengan akses strix.operation.wise.yyy.com dengan alias www.strix.operation.wise.yyy.com
 
 ![Gambar 7](./images/7.png)
+
+> Pada nomor ini diperlukan konfigurasi pada file operation.wise.a05.com seperti pada gambar. CNAME atau alias untuk strix.operation.wise.yyy.com. Lalu, diperlukan konfigurasi pada SSS dan Garden seperti pada gambar. (Diperlukan konfigurasi di SSS dan Garden seperti pada gambar pada nomor - nomor sebelumnya)
 
 <br>
 <hr>
